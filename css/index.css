@@ -1,0 +1,327 @@
+html {
+    background-color: rgba(11,14,58,1);
+    overflow: hidden;
+}
+
+body {
+    /* text-align: center; */
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; 
+}
+
+input {
+    font-size: 150%;
+    margin-left: 43%;
+    position: relative;
+    background-color: #0e58a7;
+    color: #69fff5;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    border-color: light-dark(#69fff5, #69fff5);
+}
+
+h1 {
+    color: #affffa;
+    text-shadow: rgb(182, 115, 249) 0 0 15px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-size: 230%;
+    text-align: center;
+}
+
+h2{
+    font-family: "Chakra Petch", sans-serif;
+    text-shadow: rgb(249, 115, 215) 0 0 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+h3{
+    font-family: "Chakra Petch", sans-serif;
+    text-align: left;
+    font-size: 240%;
+    font-style: italic;
+    /* margin-left: 15%; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 0;
+    color: #ffffff;
+    text-shadow: rgb(249, 115, 215) 0 0 20px;
+    text-align: center;
+}
+
+h4 {
+    color: #ffffff;
+    text-shadow: rgb(182, 115, 249) 0 0 15px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-size: 150%;
+    text-align: center;
+}
+
+p{
+    text-align: left;
+    color: aliceblue;
+    font-size: 120%;
+    margin-left: 20%;
+    margin-right: 20%;
+    line-height: 150%;
+}
+
+a{
+    text-align: left;
+    color: rgb(249, 115, 215);
+    text-shadow: rgb(182, 115, 249) 0 0 15px;
+    margin-bottom: 50px;
+    margin-top: 40px;
+    font-size: 150%;
+    margin-left: 35%;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(255, 44, 132);
+}
+
+
+.top-bar {
+    background-color: #3d569fc1;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    background-image: url(images/starfall-gif-84.gif);
+  }
+
+#foot p{
+    text-align: center;
+    font-family:monospace;
+    font-size: 105%;
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    background-color: #3d569fc1;
+    margin-bottom: -8%;
+    padding: 1%;
+}
+
+.foot{
+    height: 100%;
+    position: relative;
+}
+
+#down{
+    background-color: #0e58a7;
+    color: #69fff5;
+    margin-left: 6%;
+    margin-right: 10%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+div.download{
+    margin-left: -15%;
+}
+
+
+
+
+
+
+/*the moon styling*/
+.sphere {
+    border-radius: 100%;
+    min-width: 250px;
+    min-height: 250px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    margin-bottom: 50px;
+    animation: glow 2s infinite alternate;
+}
+
+.hemisphere {
+    width: 50%;
+    height: 100%;
+}
+
+.light {
+    background-color: #F4F6F0;
+    background-image: url(images/black-white-details-moon-texture-concept_23-2149535764.png);
+}
+
+.dark {
+    background-color: #424242;
+    background-image: url(images/4f7aa2f2d95b5fa854ab5d4f45ab7896.jpg);
+}
+
+.divider,
+.divider:after {
+    top: 0;
+    left: 0;
+    width: 255px;
+    height: 250px;
+    position: absolute;
+    border-radius: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.divider {
+    background-color: #424242;
+    background-image: url(images/4f7aa2f2d95b5fa854ab5d4f45ab7896.jpg);
+}
+
+.divider:after {
+    content: '';
+    background-color: #F4F6F0;
+    background-image: url(images/black-white-details-moon-texture-concept_23-2149535764.png);
+    transform: rotateY(180deg);
+}
+
+.container{
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 60vw;
+      height: 62vh;
+      margin-left: 20%;
+      text-align: center;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px 10px rgba(105, 170, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 50px 20px rgba(105, 170, 255, 0.7);
+    }
+}
+
+
+/*playlist*/
+.music-player {
+    text-align: center;
+    background-color: #3e85bc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-left: 35.5%;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-family: monospace;
+    border-color: light-dark(#69fff5, #69fff5);
+    background-color: #0e58a7;
+    color: #69fff5;
+    padding: 10px 20px;
+    font-size: 120%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #5844aa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*google fonts*/
+.chakra-petch-light {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .chakra-petch-regular {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .chakra-petch-medium {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .chakra-petch-semibold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .chakra-petch-bold {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .chakra-petch-light-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .chakra-petch-regular-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .chakra-petch-medium-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .chakra-petch-semibold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .chakra-petch-bold-italic {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+
+
+
+
+
