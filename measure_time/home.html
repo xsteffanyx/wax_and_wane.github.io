@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <title>Celestial Wax and Wane</title>
+</head>
+
+<body>
+
+<div class="top-bar">
+        <h3>Celestial Wax and Wane: Learning about the Lunar Cycles</h3>
+      </div>
+
+<h1 id="date-title">
+</h1>
+
+<div class="container">
+<div class="sphere">
+  <div class="light hemisphere"></div>
+  <div class="dark hemisphere"></div>
+  <div class="divider"></div>
+</div>
+</div>
+
+
+<input type="date">
+<h2>Select a Date!</h2>
+<script src="css/app.js"></script>
+<br>
+<h1>Would you like some Spacial Ambience?</h1>
+    <div class="music-player">
+        <audio controls id="audio-player">
+            <source src="music/space-chillout-14194.mp3" type="audio/mpeg">
+            <source src="music/cinematic-ambient-feeling-ambien.mp3" type="audio/mpeg">
+            <source src="music/space-race-modular-ambient-soundscape-173479.mp3" type="audio/mpeg">
+            <source src="music/deep-space-barrier-121195.mp3" type="audio/mpeg">
+            <source src="music/708810-kevp888-cd-contact-013fx.mp3" type="audio/mpeg">
+            <source src="music/funky-audio-scicmpt-retro-scifi.mp3" type="audio/mpeg">
+            <source src="music/jenajiejing-moon.mp3" type="audio/mpeg">
+            <source src="music/funky-audio-sciretro-downward-en.mp3" type="audio/mpeg">
+            <source src="music/kevp888-cd-lumiere-008-exp01-fal.mp3" type="audio/mpeg">
+            <source src="music/riley-garinger-musicsynth-hopefu.mp3" type="audio/mpeg">
+            <source src="music/space-atmospheric-background-124.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="controls">
+            <button onclick="previousSong()">Previous</button>
+            <button onclick="nextSong()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        var audio = document.getElementById('audio-player');
+        var songs = ["music/space-chillout-14194.mp3", "music/cinematic-ambient-feeling-ambien.mp3",
+         "music/space-race-modular-ambient-soundscape-173479.mp3", "music/deep-space-barrier-121195.mp3", "music/708810-kevp888-cd-contact-013fx.mp3",
+        "music/funky-audio-scicmpt-retro-scifi.mp3", "music/jenajiejing__moon.mp3", "music/music/funky-audio-sciretro-downward-en.mp3", 
+        "music/kevp888-cd-lumiere-008-exp01-fal.mp3", "music/riley-garinger-musicsynth-hopefu.mp3", "music/space-atmospheric-background-124.mp3"]; 
+        var currentSongIndex = 0;
+
+        function playSong(index) {
+            if (index >= 0 && index < songs.length) {
+                currentSongIndex = index;
+                audio.src = songs[currentSongIndex];
+                audio.play();
+            }
+        }
+
+        function nextSong() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            playSong(currentSongIndex);
+        }
+
+        function previousSong() {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            playSong(currentSongIndex);
+        }
+    </script>
+<br>
+<br>
+<h1>The Playlist</h1>
+<ul class="playlist">
+    <li><a href="https://pixabay.com/music/upbeat-space-chillout-14194/">Penguin Music - Space Chillout</a></li>
+    <li><a href="https://pixabay.com/music/ambient-cinematic-ambient-feeling-ambient-piano-music-for-videos-7767/">Lesfm - Ambient Feeling</a></li>
+    <li><a href="https://pixabay.com/music/ambient-space-race-modular-ambient-soundscape-173479/">Natures Eye - Space Race</a></li>
+    <li><a href="https://pixabay.com/music/electronic-deep-space-barrier-121195/">DSTechnician - Deep Space Barrier</a></li>
+    <li><a href="https://freesound.org/people/kevp888/sounds/708810/">Kevp888 - Magic Moon</a></li>
+    <li><a href="https://freesound.org/people/Funky_Audio/sounds/729390/">Funky Audio - Computer Room</a></li>
+    <li><a href="https://freesound.org/people/Jena.Jiejing/sounds/711285/">Jena Jiejing - The Moon is the Guarantee of Life on Earth</a></li>
+    <li><a href="https://freesound.org/people/Funky_Audio/sounds/729391/">Funky Audio - Energy Beams</a></li>
+    <li><a href="https://freesound.org/people/kevp888/sounds/720152/">Kevp888 - Falling Stars</a></li>
+    <li><a href="https://freesound.org/people/Riley_Garinger/sounds/730115/">Riley Garinger - Phase Plant</a></li>
+    <li><a href="https://pixabay.com/music/ambient-space-atmospheric-background-124841/">Ivy Music - Space Atmospheric Background</a></li>
+  </ul>
+<br>
+<br>
+<h1>What Are the Moon’s Phases?</h1>
+<p>We always see the same side of the Moon, because as Earth's natural satellite revolves around our planet, the Moon rotates, causing the same 
+    side to always face us. And yet, the Moon looks a little different every night. Sometimes the entire face glows brightly. Sometimes we only see 
+    a thin crescent. Other times the Moon seems to disappear entirely. Why does the Moon's appearance change?</p>
+    <p>The moonlight we see on Earth is sunlight reflected off the Moon's grayish-white surface. The amount of Moon we see illuminated changes over the 
+    month — lunar phases — because the Moon orbits Earth and Earth orbits the Sun. Everything is moving. When sunlight is illuminating only the Moon's 
+    far side – the side we can't directly see from Earth – that phase is called a new moon. When sunlight illuminates only the Moon's near side – the side 
+    that always faces Earth – we call that a full moon. The rest of the month, we see a different amount of the daytime side of the Moon each day. These 
+    continually changing views of the sunlit part of the Moon are the Moon's phases. The eight lunar phases are, in order: new moon, waxing crescent, first 
+    quarter, waxing gibbous, full moon, waning gibbous, third quarter and waning crescent. The cycle repeats once a month (every 29.5 days).</p>
+<p>We have a slightly different view of the Moon each night. We describe how the Moon looks with the eight Moon phases, or shapes:</p>
+
+<h4>🌑 New 🌒 Waxing Crescent 🌓 First Quarter 🌔 Waxing Gibbous</h4>
+<h4>🌕 Full 🌖 Waning Gibbous 🌗 Third Quarter 🌘 Waning Crescent</h4>
+<br>
+<h1>Understanding Lunar Eclipses</h1>
+<p>A lunar eclipse occurs when the Moon passes through the Earth's shadow, just as a solar eclipse occurs when part of the Earth passes through the Moon's 
+    shadow. So why don't eclipses happen twice a month? The reason is that the Moon's orbit around the Earth is tilted relative to the Earth's orbit around 
+    the Sun. But if that's the case, why do eclipses happen at all? Throughout the year, the Moon's orbital tilt remains fixed with respect to the stars, 
+    meaning that it changes with respect to the Sun. About twice a year, this puts the Moon in just the right position to pass through the Earth's shadow, 
+    causing a lunar eclipse.</p> 
+    <p>As the Moon passes into the central part of the Earth's shadow, called the umbra, it darkens dramatically. Once it's entirely within 
+    the umbra, the Moon appears a dim red due to sunlight scattered through the Earth's atmosphere. In fact, if you watched the eclipse from the surface of the Moon, 
+    you'd see the Sun set behind the entire Earth, bathing you in a warm red glow. Back home, you'll have to stay up late to watch a lunar eclipse, but if you do 
+    you'll see the Moon in rare form, and you'll catch a brief glimpse of our own planet's long shadow.</p>
+<br>
+<br>
+<a href="https://www.timeanddate.com/astronomy/moon/phases.html">Information Gathered VIA timeanddate.com</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="download">
+<a href="images/lunar_calendar.pdf" rel="nofollow" target="_blank" download="lunar_calendar"><button type="down">Download the Website! Comes with a Lunar Calendar...</button></a>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<div id="foot">
+    <footer>
+        <p>Designer: Steffany Medrano&emsp;&emsp;&emsp;&emsp;&emsp;Contact: steffany.9@hotmail.com<br>OCAD University</p>
+    </footer>
+    </div>
+
+</body>
+</html>
